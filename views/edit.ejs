@@ -1,0 +1,14 @@
+<h1 class="display-5">Gönderi Düzenleyin</h1>
+<p class="mb-5">Bu sayfada gönderilerinizi düzenleyebilirsiniz.</p>
+<hr>
+<form action="/articles/update/<%= article.id %>" method="post">
+<div class="form-group">
+    <label for="title">Başlık</label>
+    <input type="text" name="title" value="<%= article.title %>" class="form-control">
+</div>
+<div class="form-group">
+        <label for="Body">Gönderi</label>
+        <input type="text" name="body" value="<%= article.body %>" class="form-control">
+    </div>
+    <input type="submit" class="btn btn-danger" value="Düzenle">
+</form>

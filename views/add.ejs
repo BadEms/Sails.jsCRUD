@@ -1,0 +1,15 @@
+<h1 class="display-5">Gönderi Paylaşın</h1>
+<p class="mb-5">Bu alanda gönderileriniz paylaşabilirsiniz.</p>
+<a href="/articles/list" class="btn btn-danger">Gönderileri Listele</a>
+<hr>
+<form action="/articles/create" method="post">
+    <div class="form-group">
+        <label for="title">Gönderi Başlık</label>
+        <input type="text" name="title" class="form-control">
+    </div>
+    <div class="form-group">
+            <label for="body">Gönderi</label>
+            <textarea name="body"  cols="30" rows="10" class="form-control"></textarea>
+        </div>
+        <input type="submit" class="btn btn-danger">
+</form>

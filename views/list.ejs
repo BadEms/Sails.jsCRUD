@@ -1,0 +1,26 @@
+<h1 class="display-4">Gönderiler</h1>
+<table class="table warning">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Başlık</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+            <% articles.forEach(function(article){ %>
+                <tr>
+                    <td><%= article.id %></td>
+                    <td><%= article.title %></td>
+                    <td>
+                        <a href="/articles/edit/<%= article.id %>" class="btn btn-primary">Düzenle</a>
+                        <form class="d-inline"  action="/articles/delete/<%= article.id %>" method="post">
+                        <input type="submit" class="btn btn-success" value="Delete">
+                        </form>
+                    </td>
+                </tr>
+            <% }) %>
+    </tbody>
+</table>
+<hr>
+<a href="/articles/add" class="btn btn-danger">Gönderi Ekle</a>
